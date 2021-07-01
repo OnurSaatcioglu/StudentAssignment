@@ -99,6 +99,7 @@ namespace StudentAssignment.Controllers
             {
                 try
                 {
+                    student.DateUpdated = DateTime.Now;
                     _context.Update(student);
                     await _context.SaveChangesAsync();
                 }
