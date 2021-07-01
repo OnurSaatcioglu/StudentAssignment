@@ -58,6 +58,7 @@ namespace StudentAssignment.Controllers
         {
             if (ModelState.IsValid)
             {
+                student.DateCreated = DateTime.Now;
                 _context.Add(student);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
