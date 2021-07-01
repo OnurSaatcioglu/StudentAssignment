@@ -35,6 +35,8 @@ namespace StudentAssignment.Controllers
 
             var student = await _context.Student
                 .FirstOrDefaultAsync(m => m.Id == id);
+
+            student.Age = DateTime.Today.Year - student.DateOfBirth.Year;
             if (student == null)
             {
                 return NotFound();
