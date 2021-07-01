@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using StudentAssignment.Models;
 
 namespace StudentAssignment.Data
 {
@@ -12,5 +13,6 @@ namespace StudentAssignment.Data
             : base(options)
         {
         }
+        public DbSet<StudentAssignment.Models.Student> Student { get; set; }
     }
 }
